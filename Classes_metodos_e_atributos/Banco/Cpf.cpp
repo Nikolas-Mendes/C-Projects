@@ -1,8 +1,6 @@
-#include <string>
 #include "Cpf.hpp"
 
-Cpf(std::string numero)
-    :numero(numero)
+Cpf::Cpf(std::string numero):numero(numero)
 {
 }
 

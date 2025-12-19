@@ -9,4 +9,4 @@ private:
 public:
     explicit Cpf(std::string numero);
     std::string getNumero() const;
-}
+};

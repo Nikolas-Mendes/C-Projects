@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <ostream>
 #include "Titular.hpp"
 
 class Conta
@@ -22,4 +23,6 @@ public:
     void depositar(float valorADepositar);
     std::string getNumero() const;
     float getSaldo() const;
-}
+
+    friend std::ostream& operator<<(std::ostream& os, const Conta& conta);
+};

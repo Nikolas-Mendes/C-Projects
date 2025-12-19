@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Cpf.hpp"
 
-Titular(Cpf cpf, std::string nome)
+Titular::Titular(Cpf cpf, std::string nome)
     :cpf(cpf), nome(nome)
 {
     verificaTamanhoDoNome();
@@ -10,6 +10,10 @@ Titular(Cpf cpf, std::string nome)
 
 std::string Titular::getNome() const{
     return nome;
+}
+
+const Cpf& Titular::getCpf() const {
+    return cpf;
 }
 
 void Titular::verificaTamanhoDoNome()

@@ -11,7 +11,8 @@ private:
 public:
     Titular(Cpf cpf, std::string nome);
     std::string getNome() const;    
+    const Cpf& getCpf() const;
 
 private:
     void verificaTamanhoDoNome();
-}
+};

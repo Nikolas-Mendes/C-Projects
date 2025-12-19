@@ -55,4 +55,12 @@ int Conta::getNumeroDeContas()
     return numeroDeContas;
 }
 
+std::ostream& operator<<(std::ostream& os, const Conta& conta)
+{
+    os << "Titular: " << conta.titular.getNome() << "\n"
+       << "CPF: " << conta.titular.getCpf().getNumero() << "\n"
+       << "Conta: " << conta.getNumero() << "\n"
+       << "Saldo: R$ " << conta.getSaldo();
 
+    return os;
+}
