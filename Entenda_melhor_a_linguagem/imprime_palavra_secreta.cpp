@@ -1,14 +1,19 @@
 #include <iostream>
 #include "imprime_palavra_secreta.hpp"
 
-void imprime_palavra_secreta (std::string& palavra_secreta, const std::map<char, bool>& chutou){
+void imprime_palavra_secreta (
+    const std::string& palavra_secreta, 
+    const std::map<char, bool>& chutou)
+{
     for (char letra : palavra_secreta){
-        if (chutou.find(letra) == chutou.end() || chutou.at(letra)){
+        auto it = chutou.find(letra);
+
+        if (it != chutou.end() && it->second){
             std::cout << letra << " ";
-	}
+	    }
         else {
             std::cout << "_ ";
-	}
+	    }
     }
     std::cout << std::endl;
 }

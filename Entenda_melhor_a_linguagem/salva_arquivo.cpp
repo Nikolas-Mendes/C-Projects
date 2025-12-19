@@ -16,7 +16,7 @@ void salva_arquivo (std::vector<std::string> nova_lista){
 	arquivo.close();
     }
     else {
-	std::cout << "Não foi possível modificar a lista de palavras!" << std::endl;
+	std::cout << "Nao foi possivel modificar a lista de palavras!" << std::endl;
 	exit(0);
     }
 }

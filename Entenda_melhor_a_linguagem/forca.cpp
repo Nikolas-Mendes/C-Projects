@@ -14,11 +14,12 @@
 #include "sorteia_palavra.hpp"
 #include "adiciona_palavra.hpp"
 #include "salva_arquivo.hpp"
-using namescape std;
 
-static string palavra_secreta;
-static map<char, bool> chutou;
-static vector<char> chutes_errados;
+using namespace std;
+
+string palavra_secreta;
+map<char, bool> chutou;
+vector<char> chutes_errados;
 
 int main () {
     imprime_cabecalho();
@@ -26,29 +27,29 @@ int main () {
     palavra_secreta = sorteia_palavra();
 
     while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5){
-	imprime_chutes_errados(chutes_errados);
+	    imprime_chutes_errados(chutes_errados);
 
-	imprime_palavra_secreta(palavra_secreta, chutou);
+	    imprime_palavra_secreta(palavra_secreta, chutou);
 
-	chute(chutou, chutes_errados);	
+	    chute(chutou, chutes_errados);	
     }
 
     cout << "Fim de Jogo!" << endl;
     cout << "A palavra secreta era: " << palavra_secreta << endl;
 
     if (nao_acertou(palavra_secreta, chutou)){
-	cout << "Você Perdeu! Tente Novamente!" << endl;
+	    cout << "Voce Perdeu! Tente Novamente!" << endl;
     }
     else {
-	cout << "Parabéns! Você acertou a palavra secreta!" << endl;
-	
-	cout << "Você deseja adicionar uma nova palavra ao banco de palavras? (S/N)";
-	char resposta;
-	cin >> resposta;
+        cout << "Parabens! Voce acertou a palavra secreta!" << endl;
+        
+        cout << "Voce deseja adicionar uma nova palavra ao banco de palavras? (S/N)";
+        char resposta;
+        cin >> resposta;
 
-	if (resposta == 'S'){
-	    adiciona_palavra();
-	}
+        if (resposta == 'S'){
+            adiciona_palavra();
+        }
     }
 
     cin.get();

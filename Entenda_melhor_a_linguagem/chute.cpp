@@ -10,10 +10,10 @@ void chute (std::map<char, bool>& chutou, std::vector<char>& chutes_errados){
     chutou[chute] = true;
 
     if (letra_existe(chute)){
-        std::cout << "Você Acertou! Seu chute está na palavra!" << std::endl;
+        std::cout << "Voce Acertou! Seu chute esta na palavra!" << std::endl;
     }
     else {
-        std::cout << "Você Errou! Seu chute não está na palavra!" << std::endl;
+        std::cout << "Voce Errou! Seu chute nao esta na palavra!" << std::endl;
         chutes_errados.push_back(chute);
     }
     std::cout << std::endl;

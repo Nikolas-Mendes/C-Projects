@@ -5,7 +5,7 @@
 #include "salva_arquivo.hpp"
 
 void adiciona_palavra (){
-    std::cout << "Digite a nova palavra, usando letras maiúsculas." << std::endl;
+    std::cout << "Digite a nova palavra, usando letras maiusculas." << std::endl;
     std::string nova_palavra;
     std::cin >> nova_palavra;
     

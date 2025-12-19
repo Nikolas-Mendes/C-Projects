@@ -27,7 +27,7 @@ std::vector<std::string> le_arquivo (){
         return palavras_do_arquivo;
     }
     else {
-   	std::cout << "Não foi possível acessar o banco de palavras!" << std::endl;
+   	std::cout << "Nao foi possivel acessar o banco de palavras!" << std::endl;
 	exit(0);
     }
 }

@@ -2,4 +2,4 @@
 #include <vector>
 #include <string>
 
-vector<string> le_arquivo();
+std::vector<std::string> le_arquivo();
